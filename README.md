@@ -8,5 +8,5 @@ New drinks are added to the machine from time to time. Build a general mechanism
 Use a Graphical User Interface to your system.
 </div>
 <h4>Preview of the app</h4>
-<img src="" width="800">
+<img src="https://github.com/Tali74/Drinks-Vending-Machine/blob/main/vending.PNG" width="800">
 </div>
