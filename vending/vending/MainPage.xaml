@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="vending.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:vending"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Foreground="Black">
+
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="/Properties/Assets\vending machine..png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="332*"/>
+            <RowDefinition Height="221*"/>
+            <RowDefinition Height="203*"/>
+            <RowDefinition Height="243*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="149*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Vending Machine" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Height="67" Width="384"/>
+        <TextBlock Name="showChoice" FontSize="15" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    Grid.Row="3" Grid.Column="1" TextAlignment="Center">
+        </TextBlock>
+        <StackPanel Name="CoffeeList" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" >
+            <Button Name="Tea" VerticalAlignment="Top" HorizontalAlignment="Center" Tapped="Btn_Tapped" Grid.Column="1" Grid.Row="1" >
+                <Image Source="/Properties/Assets/1.png" Height="60" Width="60" />
+            </Button>
+            <Button Name="Cappuccino" VerticalAlignment="Center" HorizontalAlignment="Left" Tapped="Btn_Tapped"  >
+                <Image Source="/Properties/Assets/2.jpg" Height="60" Width="60" >
+                </Image>
+            </Button>
+        </StackPanel>
+        <StackPanel Name="CoffeeList1" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" >
+            <Button Name="Espresso" VerticalAlignment="Top" HorizontalAlignment="Center" Tapped="Btn_Tapped">
+                <Image Source="/Properties/Assets/3.jpg" Height="60" Width="60" />
+            </Button>
+            <Button Name="Chocolate" VerticalAlignment="Center" HorizontalAlignment="Left" Tapped="Btn_Tapped">
+                <Image Source="/Properties/Assets/4.jpg" Height="60" Width="60" >
+                </Image>
+            </Button>
+        </StackPanel>
+        <TextBox x:Name="payTbx" FontSize="18" PlaceholderText="MONEY"
+                 Grid.Row="2" Grid.Column="1" 
+                 HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+        <Button x:Name="RestockBtn" Grid.Row="3" Grid.Column="2"
+                HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100"
+                Foreground="Black" Background="Brown" FontSize="18"
+                Tapped="RestockBtn_Tapped">Restock</Button>
+    </Grid>
+</Page>
